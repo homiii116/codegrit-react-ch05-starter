@@ -1,24 +1,19 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
-
 body {
   font-size: 14px;
   line-height: 18px;
   font-family: Helvetica, Arial, sans-serif;
 }
-
 a {
   text-decoration: none;
   color: #262626;
   font-weight: 600;
 }
-
 ul {
   list-style: none;
 }
-
 ul,
 li {
   margin: 0;
@@ -29,10 +24,10 @@ li {
 }
 
 /* 以下のCSS定義はemotionに移行することで全て無くなるようにしましょう。 */
+
 .flex-container {
   display: flex;
 }
-
 .insta-card {
   display: flex;
   flex-direction: column;
@@ -41,33 +36,37 @@ li {
   border: 1px solid #e6e6e6;
   border-radius: 5px;
 }
-
 .insta-card-dark {
   background-color: #262626;
   color: #999;
 }
-
 .insta-card-dark .commenter-name {
   color: #999;
 }
 
+.card-header {
+  
+}
+.poster-avatar {
+  
+}
+.poster-avatar img {
+
+}
 .card-image {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 .card-image img {
   height: 450px;
   width: 611px;
   border: 0;
   background-color: #dddddd;
 }
-
 .card-main {
   padding: 0 16px;
 }
-
 .card-main-icons {
   margin-top: 4px;
   height: 40px;
@@ -75,29 +74,23 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-
 .icons {
   display: flex;
   justify-content: space-between;
 }
-
-.card-main-icons ul > li {
+.card-main-icons ul>li {
   margin-right: 5px;
 }
-
 .like-counts {
   font-weight: bold;
   margin-bottom: 8px;
 }
-
 .comments {
   margin-bottom: 4px;
 }
-
 .comments a {
   margin-right: .3em;
 }
-
 .comment-box {
   border-top: 1px solid #efefef;
   color: #999;
@@ -106,7 +99,6 @@ li {
   align-items: center;
   font-size: 0.9em;
 }
-
 .post-date {
   margin-bottom: 4px;
   font-size: 10px;
@@ -131,5 +123,5 @@ ul.theme-swither > li {
 }
 
 .theme-swither a:hover, .theme-swither a:active {
-  color: #36cfc9;
+  color: #36cfc9
 }
