@@ -1,22 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+
+const ThemeSwitcher = styled.li({
+  padding: '5px',
+  marginBottom: '7px'
+})
 
 const ThemeSwitcher = ({ theme, switchTheme }) => (
-  <ul className="theme-swither">
-    <li>
+  <ul>
+    <ThemeSwitcher>
       <a 
         className={theme === 'light' ? "chosen" : "default"}
         onClick={(e) => switchTheme('light', e)}>
         Light
       </a>
-    </li>
-    <li>
+    </ThemeSwitcher>
+    <ThemeSwitcher>
       <a 
         className={theme === 'dark' ? "chosen" : "default"}
         onClick={(e) => switchTheme('dark', e)}>
         Dark
       </a>
-    </li>
+    </ThemeSwitcher>
   </ul>
 );
 

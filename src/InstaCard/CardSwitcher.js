@@ -2,22 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
+const ThemeSwitcher = styled.li({
+  padding: '5px',
+  marginBottom: '7px'
+})
+
 const CardSwitcher = ({ id, switchCard }) => (
-  <ul className="theme-swither">
-    <li>
+  <ul>
+    <ThemeSwitcher>
       <a
         className={id === 1 ? "chosen" : "default"}
         onClick={(e) => switchCard(1, e)}>
         1枚目
       </a>
-    </li>
-    <li>
+    </ThemeSwitcher>
+    <ThemeSwitcher>
       <a
         className={id === 2 ? "chosen" : "default"}
         onClick={(e) => switchCard(2, e)}>
         2枚目
       </a>
-    </li>
+    </ThemeSwitcher>
   </ul>
 );
 
