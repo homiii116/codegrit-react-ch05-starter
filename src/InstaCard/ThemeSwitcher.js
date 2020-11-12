@@ -1,28 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css, jsx } from '@emotion/core'
 
-const ThemeSwitcher = styled.li({
+const ThemeSwitcherStyle = styled.li({
   padding: '5px',
   marginBottom: '7px'
 })
 
+const ThemeFontColor = styled.a({
+  color: '#262626',
+  cursor: 'pointer'
+}, ({ chosen }) => {
+  let switchColor = []
+  if(chosen) {
+    switchColor.push({ color: '#36cfc9' })
+  }
+  return switchColor;
+})
+
+const skyBlue = css({
+  color: '#36cfc9'
+})
+
+const ThemeSwitcherColorHoverOrActive = css({
+  '&:hover, &:active': { skyBlue }
+})
+
 const ThemeSwitcher = ({ theme, switchTheme }) => (
   <ul>
-    <ThemeSwitcher>
-      <a 
-        className={theme === 'light' ? "chosen" : "default"}
+    <ThemeSwitcherStyle>
+      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+        chosen={theme === 'light'}
         onClick={(e) => switchTheme('light', e)}>
         Light
-      </a>
-    </ThemeSwitcher>
-    <ThemeSwitcher>
-      <a 
-        className={theme === 'dark' ? "chosen" : "default"}
+      </ThemeFontColor>
+    </ThemeSwitcherStyle>
+    <ThemeSwitcherStyle>
+      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+        chosen={theme === 'dark'}
         onClick={(e) => switchTheme('dark', e)}>
         Dark
-      </a>
-    </ThemeSwitcher>
+      </ThemeFontColor>
+    </ThemeSwitcherStyle>
   </ul>
 );
 

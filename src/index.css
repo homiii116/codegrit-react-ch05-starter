@@ -115,21 +115,3 @@ li {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-
-.theme-swither a.chosen {
-  color: #36cfc9;
-}
-
-ul.theme-swither > li {
-  padding: 5px;
-  margin-bottom: 7px;
-}
-
-.theme-swither a {
-  color: #262626;
-  cursor: pointer;
-}
-
-.theme-swither a:hover, .theme-swither a:active {
-  color: #36cfc9;
-}

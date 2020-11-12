@@ -1,28 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css, jsx } from '@emotion/core'
 
-const ThemeSwitcher = styled.li({
+const ThemeSwitcherStyle = styled.li({
   padding: '5px',
   marginBottom: '7px'
+})
+const ThemeFontColor = styled.a({
+  color: '#262626',
+  cursor: 'pointer'
+}, ({ chosen }) => {
+  let switchColor = []
+  if(chosen) {
+    switchColor.push({ color: '#36cfc9' })
+  }
+  return switchColor;
+})
+
+const skyBlue = css({
+  color: '#36cfc9'
+})
+
+const ThemeSwitcherColorHoverOrActive = css({
+  '&:hover, &:active': { skyBlue }
 })
 
 const CardSwitcher = ({ id, switchCard }) => (
   <ul>
-    <ThemeSwitcher>
-      <a
-        className={id === 1 ? "chosen" : "default"}
+    <ThemeSwitcherStyle>
+      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+        chosen={id === 1}
         onClick={(e) => switchCard(1, e)}>
         1枚目
-      </a>
-    </ThemeSwitcher>
-    <ThemeSwitcher>
-      <a
-        className={id === 2 ? "chosen" : "default"}
+      </ThemeFontColor>
+    </ThemeSwitcherStyle>
+    <ThemeSwitcherStyle>
+      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+        chosen={id === 2}
         onClick={(e) => switchCard(2, e)}>
         2枚目
-      </a>
-    </ThemeSwitcher>
+      </ThemeFontColor>
+    </ThemeSwitcherStyle>
   </ul>
 );
 
