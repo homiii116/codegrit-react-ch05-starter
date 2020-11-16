@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { css, jsx } from '@emotion/core'
+
 
 const ThemeSwitcherStyle = styled.li({
   padding: '5px',
@@ -10,7 +10,10 @@ const ThemeSwitcherStyle = styled.li({
 
 const ThemeFontColor = styled.a({
   color: '#262626',
-  cursor: 'pointer'
+  cursor: 'pointer',
+   '&:hover, &:active': {
+      color: '#36cfc9'
+   }
 }, ({ chosen }) => {
   let switchColor = []
   if(chosen) {
@@ -19,25 +22,17 @@ const ThemeFontColor = styled.a({
   return switchColor;
 })
 
-const skyBlue = css({
-  color: '#36cfc9'
-})
-
-const ThemeSwitcherColorHoverOrActive = css({
-  '&:hover, &:active': { skyBlue }
-})
-
 const ThemeSwitcher = ({ theme, switchTheme }) => (
   <ul>
     <ThemeSwitcherStyle>
-      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+      <ThemeFontColor
         chosen={theme === 'light'}
         onClick={(e) => switchTheme('light', e)}>
         Light
       </ThemeFontColor>
     </ThemeSwitcherStyle>
     <ThemeSwitcherStyle>
-      <ThemeFontColor css={ThemeSwitcherColorHoverOrActive}
+      <ThemeFontColor
         chosen={theme === 'dark'}
         onClick={(e) => switchTheme('dark', e)}>
         Dark

@@ -5,21 +5,37 @@ import ThemeSwitcher from './ThemeSwitcher';
 import CardSwitcher from './CardSwitcher'
 import { ReactComponent as LoadingImg } from '../images/loading.svg';
 import { fetchData } from '../CardDataUtils';
+import styled from '@emotion/styled';
+
+const InstaCard = styled.article({
+  display: 'flex',
+  flexDirection: 'column',
+  maxWidth: '614px',
+  width: '100%',
+  border: '1px solid #e6e6e6',
+  borderRadius: '5px;'
+}, ({ theme }) => {
+  let darkTheme = []
+  if(theme === 'dark') {
+    darkTheme.push({ backgroundColor: '#262626', color: '#999' })
+  }
+  return darkTheme;
+})
 
 const EmptyBox = () => {
-  const loaderWrapperStyle = {
+  const LoaderWrapperStyle = styled.div({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
     width: '100%',
-  }
+  })
   return (
-    <article className="insta-card" style={{ height: 600 }}>
-      <div style={loaderWrapperStyle}>
+    <InstaCard>
+      <LoaderWrapperStyle>
         <LoadingImg />
-      </div>
-    </article>
+      </LoaderWrapperStyle>
+    </InstaCard>
   );
 }
 

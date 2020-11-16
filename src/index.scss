@@ -29,16 +29,10 @@ li {
   display: flex;
 }
 .insta-card {
-  display: flex;
-  flex-direction: column;
-  max-width: 614px;
-  width: 100%;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
+
 }
 .insta-card-dark {
-  background-color: #262626;
-  color: #999;
+
 }
 .insta-card-dark .commenter-name {
   color: #999;
@@ -54,15 +48,10 @@ li {
 
 }
 .card-image {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+
 }
 .card-image img {
-  height: 450px;
-  width: 611px;
-  border: 0;
-  background-color: #dddddd;
+
 }
 .card-main {
   padding: 0 16px;
