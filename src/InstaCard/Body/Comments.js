@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
+//途中
+const CommentsStyle = styled.ul({
+  marginBottom: '4px'
+})
+
 const Comments = ({ data }) => {
   const { commentOne, commentTwo } = data;
   return (

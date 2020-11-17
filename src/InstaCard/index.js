@@ -83,19 +83,15 @@ export default class extends Component {
       chosenId, 
       loadedOnce 
     } = this.state;
-    let instaCardClass = "insta-card";
     let articlePart;
-    if (theme === 'dark') {
-      instaCardClass = "insta-card insta-card-dark"
-    }
     if (loading && loadedOnce === false) {
       articlePart = <EmptyBox />;
     } else {
       articlePart = (
-        <article className={instaCardClass}>
+        <InstaCard theme={theme}>
           <Header theme={theme} data={data} />
           <Body theme={theme} data={data} chosenId={chosenId} />
-        </article>
+        </InstaCard>
       );
     }
     return (

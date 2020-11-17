@@ -33,10 +33,6 @@ li {
   display: flex;
 }
 
-.insta-card-dark .commenter-name {
-  color: #999;
-}
-
 .card-main {
   padding: 0 16px;
 }
