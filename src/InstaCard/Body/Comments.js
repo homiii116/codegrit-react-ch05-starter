@@ -1,23 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import styled from '@emotion/styled';
 
-//途中
-const CommentsStyle = styled.ul({
-  marginBottom: '4px'
-})
+const CommentsStyle = styled.ul`
+  margin-bottom: 4px;
+  & li > a {
+    margin-right: .3em;
+  }
+`
 
-const Comments = ({ data }) => {
+
+const Comments = ({ theme, data }) => {
   const { commentOne, commentTwo } = data;
   return (
-    <ul className="comments">
+    <CommentsStyle>
       <Comment
         username={commentOne.poster}
-        comment={commentOne.body} />
+        comment={commentOne.body} 
+        theme={theme} />
       <Comment
         username={commentTwo.poster}
-        comment={commentTwo.body} />
-    </ul>
+        comment={commentTwo.body} 
+        theme={theme} />
+    </CommentsStyle>
   );
 };
 

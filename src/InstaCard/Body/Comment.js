@@ -24,11 +24,13 @@ const Comment = ({ theme, username, comment }) => (
 );
 
 Comment.propTypes = {
+  theme: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
 }
 
 Comment.defaultProps = {
+  theme: 'light',
   username: "testuser",
   comment: "テストのコメント",
 }
