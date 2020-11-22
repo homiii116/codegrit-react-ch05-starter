@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const CommentsStyle = styled.ul`
   margin-bottom: 4px;

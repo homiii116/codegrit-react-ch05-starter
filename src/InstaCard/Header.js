@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '../images/avatar-one.png';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const HeaderStyle = styled.section({
   display: 'flex',

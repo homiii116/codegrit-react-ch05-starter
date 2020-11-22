@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BodyMain from './Main';
 import MainImg from '../../images/image-one.jpg';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const CardImageContainer = styled.div({
   width: '100%',

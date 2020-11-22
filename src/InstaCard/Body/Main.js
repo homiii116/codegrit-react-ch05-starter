@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import MainIcons from './MainIcons';
 import Comments from './Comments';
 import CommentBox from './CommentBox'
-import styled from '@emotion/styled';
-
+import styled from '@emotion/styled/macro';
 const CardMain = styled.section({
   padding: '0 16px'
 })

@@ -6,7 +6,7 @@ import BubbleImg from '../../images/bubble.png';
 import BubbleImgDark from '../../images/bubble-gray.png';
 import BookmarkImg from '../../images/bookmark.png';
 import BookmarkImgDark from '../../images/bookmark-gray.png';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const CardMainIcons = styled.div`
   margin-top: 4px;

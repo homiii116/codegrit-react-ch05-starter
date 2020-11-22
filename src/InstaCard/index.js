@@ -5,7 +5,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 import CardSwitcher from './CardSwitcher'
 import { ReactComponent as LoadingImg } from '../images/loading.svg';
 import { fetchData } from '../CardDataUtils';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const InstaCard = styled.article({
   display: 'flex',
